@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  server:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - app-net
+    depends_on:
+      - redis
+
+  redis:
+    image: redis
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge

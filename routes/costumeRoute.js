@@ -1,5 +1,5 @@
 // const Joi = require('joi')
-exports.costumeRoute = {
+module.exports = [{
   method: 'GET',
   path: '/he/{name}',
   handler: (request, h) => {
@@ -22,3 +22,4 @@ exports.costumeRoute = {
   //   }
   // }
 }
+]
